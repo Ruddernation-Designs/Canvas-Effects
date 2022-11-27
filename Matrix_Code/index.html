@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ruddernation Designs" />
+<meta name="keywords" content="ruddernation,HTML5 canvas,HTML5,Ruddernation Designs,canvas,canvas effects" />
+<meta name="author" content="Ruddernation Designs" />
+<meta name="Copyright" content="Ruddernation Designs 1998-2022"/>
+<title>Canvas - The Matrix</title>
+</head>
+<body>
+<script type="text/javascript">
+var theinHTML;
+var thelessstr;
+var ascSt=22;
+var ascEnd=126;
+var numoflines = 28;
+var lines = new Array();
+var intervalID = new Array();
+var subIntervalID = new Array();
+var subIntervalID2 = new Array();
+var scH = screen.height-220;
+var scW = screen.width-50;
+window.onload = createlines;
+
+var hD="0123456789ABCDEF";
+function d2h(d)
+{
+var h = hD.substr(d&15,1);
+while(d > 15)
+{
+d >>= 4;
+h = hD.substr(d&15,1)+h;
+}
+return h;
+}
+function line(length, maxlength, chars, speed, x)
+{
+this.length = length;
+this.maxlength = maxlength;
+this.chars = chars;
+this.speed = speed;
+this.x = x;
+}
+
+function createlines()
+{
+for(var eachline = 0; eachline < numoflines; eachline++)
+{
+lines[eachline] = new line(0, Math.round(Math.random()*15+5), String.fromCharCode(Math.round(Math.random()*(ascEnd-ascSt)+ascSt)), Math.round(Math.random()*400+100), eachline*61);
+}
+
+for(var writelines = 0; writelines < numoflines; writelines++)
+{
+var newline = document.createElement("div");
+newline.id = "char" + writelines;
+newline.style.position = "absolute";
+newline.style.top = "5px";
+newline.style.left = lines[writelines].x + "px";
+var firstchar = document.createElement("div");
+var newcolor = d2h(Math.round(1/(lines[writelines].maxlength+1)*255));
+if(newcolor.length == 1)
+newcolor = "0" + newcolor;
+firstchar.style.color = "#00"+newcolor+"00"
+firstchar.innerHTML = lines[writelines].chars
+newline.appendChild(firstchar);
+document.body.appendChild(newline);
+}
+start();
+}
+
+function start()
+{
+for(var pickastring = 0; pickastring < numoflines; pickastring++)
+{
+intervalID[pickastring] = setInterval("addchars("+pickastring+")", lines[pickastring].speed);
+}
+}
+
+function addchars(theline)
+{
+if(lines[theline].length >= lines[theline].maxlength)
+{
+clearInterval(intervalID[theline]);
+subIntervalID[theline] = setInterval("movethestring("+theline+")", lines[theline].speed);
+}
+else
+{
+	
+myRandomChar = String.fromCharCode(Math.round(Math.random()*(ascEnd-ascSt)+ascSt));
+while(myRandomChar == "'" || myRandomChar == '"' || myRandomChar == "\\")
+myRandomChar = String.fromCharCode(Math.round(Math.random()*(ascEnd-ascSt)+ascSt));
+
+
+var newchar = document.createElement("div");
+newchar.innerHTML = myRandomChar;
+document.getElementById("char"+theline).appendChild(newchar);
+
+
+var i;
+for(i = 0; i <= lines[theline].length; i++)
+{
+var newcolor = d2h(Math.round((i+1)/(lines[theline].maxlength+1)*255));
+newcolor = "" + newcolor;
+if(newcolor.length == 1)
+newcolor = "0" + newcolor;
+document.getElementById("char"+theline).childNodes[i].style.color = "#00" + newcolor + "00";
+document.getElementById("char"+theline).childNodes[i].style.fontWeight = "normal";
+}
+document.getElementById("char"+theline).childNodes[i].style.color = "#99FF99";
+document.getElementById("char"+theline).childNodes[i].style.fontWeight = "bold";
+
+
+lines[theline].length++;
+}
+}
+
+function movethestring(theline)
+{
+var topstringnum = document.getElementById("char"+theline).offsetTop;
+if((topstringnum + (lines[theline].maxlength * 15)) >= scH)
+{
+clearInterval(subIntervalID[theline]);
+subIntervalID2[theline] = setInterval("clearletters("+theline+")", lines[theline].speed);
+}
+else
+{
+	
+myRandomChar = String.fromCharCode(Math.round(Math.random()*(ascEnd-ascSt)+ascSt));
+while(myRandomChar=="'" || myRandomChar=='"' || myRandomChar=="\\")
+myRandomChar = String.fromCharCode(Math.round(Math.random()*(ascEnd-ascSt)+ascSt));
+var newchar = document.createElement("div");
+newchar.innerHTML = myRandomChar;
+document.getElementById("char"+theline).appendChild(newchar);
+
+
+document.getElementById("char"+theline).removeChild(document.getElementById("char"+theline).childNodes[0]);
+
+
+var i;
+for(i = 0; i < lines[theline].length; i++)
+{
+var newcolor = d2h(Math.round((i+1)/(lines[theline].maxlength+1)*255));
+newcolor = "" + newcolor;
+if(newcolor.length == 1)
+newcolor = "0" + newcolor;
+document.getElementById("char"+theline).childNodes[i].style.color = "#00" + newcolor + "00";
+document.getElementById("char"+theline).childNodes[i].style.fontWeight = "normal";
+}
+document.getElementById("char"+theline).childNodes[i].style.color = "#99FF99";
+document.getElementById("char"+theline).childNodes[i].style.fontWeight = "bold";
+// move
+document.getElementById("char"+theline).style.top = (topstringnum+15) + "px";
+}
+}
+
+function clearletters(theline)
+{
+if(lines[theline].length <= -1)
+{
+clearInterval(subIntervalID2[theline]);
+document.getElementById("char"+theline).style.top = 0;
+intervalID[theline] = setInterval("addchars("+theline+")", lines[theline].speed);
+}
+else
+{
+	
+document.getElementById("char"+theline).removeChild(document.getElementById("char"+theline).childNodes[document.getElementById("char"+theline).childNodes.length-1]);
+
+var topstringnum = document.getElementById("char"+theline).offsetTop;
+document.getElementById("char"+theline).style.top = topstringnum+15 + "px";
+
+lines[theline].length--;
+}
+}
+</script>
+<style type="text/css">
+body {
+font: normal normal normal 10px/15px symbol,Rockwell; 
+color:#FFFFFF;
+background-color:black;
+margin:0;
+padding:0;
+}
+body div {
+text-align: center;
+}
+body {overflow: hidden;font-family: Georgia, Helvetica, Arial, sans-serif;color: #333333;font-size: 11px;}
+</style>
+</body>
+</html>
