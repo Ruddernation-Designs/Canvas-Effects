@@ -10,4 +10,4 @@ Simply upload to your server and open the index.html (That's in each folder) onl
 
  - 🔥 <a href="https://github.com/Ruddernation-Designs/Canvas-Effects/tree/main/Fire" target="_blank" title="Fire">Fire.</a> - Just touch or click to create fire.
 
- - 🔥 <a href="https://github.com/Ruddernation-Designs/Canvas-Effects/tree/main/illusion" target="_blank" title="Illusion">Illusion.</a> - Drag around the screen, change effects.
+ - 🔥 <a href="https://github.com/Ruddernation-Designs/Canvas-Effects/tree/main/Illusion" target="_blank" title="Illusion">Illusion.</a> - Drag around the screen, change effects.
