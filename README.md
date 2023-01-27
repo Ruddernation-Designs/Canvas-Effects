@@ -17,3 +17,5 @@ Simply upload to your server and open the index.html (That's in each folder) onl
   - 🤔 <a href="https://github.com/Ruddernation-Designs/Canvas-Effects/tree/main/Particle" target="_blank" title="Particles">Particles</a> - They're gonna chase you! lol
 
   - 👯 <a href="https://github.com/Ruddernation-Designs/Canvas-Effects/tree/main/Particle_2" target="_blank" title="Particles_2">Particles_2</a> - These look amazing on the black background!.
+  
+  - 🔵🔴 <a href="https://github.com/Ruddernation-Designs/Canvas-Effects/tree/main/Particle_3" target="_blank" title="Particles_3">Particles_3</a> - This will explode when you move your mouse/finger on the screen.
