@@ -21,3 +21,5 @@ Simply upload to your server and open the index.html (That's in each folder) onl
   - 🔵🔴 <a href="https://github.com/Ruddernation-Designs/Canvas-Effects/tree/main/Particles_3" target="_blank" title="Particles_3">Particles_3</a> - This will explode when you move your mouse/finger on the screen.
 
   - ⚡🤔 <a href="https://github.com/Ruddernation-Designs/Canvas-Effects/tree/main/snake" target="_blank" title="Snake">Snake</a> - Watch this snake follow your finger/mouse pointer, watch out! It's bright.
+
+  - ⚡🤔 <a href="https://github.com/Ruddernation-Designs/Canvas-Effects/tree/main/Snake_2" target="_blank" title="Snake_2">Snake</a> - Watch this snake follow your finger/mouse pointer, watch out! It's super bright and super colourful, Enjoy it!.
