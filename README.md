@@ -23,3 +23,9 @@ Simply upload to your server and open the index.html (That's in each folder) onl
   - ⚡🤔 <a href="https://github.com/Ruddernation-Designs/Canvas-Effects/tree/main/Snake" target="_blank" title="Snake">Snake</a> - Watch this snake follow your finger/mouse pointer, watch out! It's bright.
 
   - 🔥🔥 <a href="https://github.com/Ruddernation-Designs/Canvas-Effects/tree/main/Snake_2" target="_blank" title="Snake_2">Snake 2</a> - Watch this snake follow your finger/mouse pointer, watch out! It's super bright and super colourful, Enjoy it!.
+
+  - 🔵⚡ <a href="https://github.com/Ruddernation-Designs/Canvas-Effects/tree/main/Spinicle" target="_blank" title="Spinicle">Spinicle</a> - Hold your mouse button or touch with your finger to show you something special which I've called the Spinicle, lol.
+
+  - 🌱🔭 <a href="https://github.com/Ruddernation-Designs/Canvas-Effects/tree/main/Water" target="_blank" title="Water">Water</a> - move your mouse/finger around the page or press your keyboard for rain drops.
+
+  - 👯💬 <a href="https://github.com/Ruddernation-Designs/Canvas-Effects/tree/main/WaterText" target="_blank" title="WaterText">Water Text</a> - Write something and press enter and watch the splash!
