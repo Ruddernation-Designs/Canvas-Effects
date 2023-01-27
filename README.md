@@ -22,4 +22,4 @@ Simply upload to your server and open the index.html (That's in each folder) onl
 
   - ⚡🤔 <a href="https://github.com/Ruddernation-Designs/Canvas-Effects/tree/main/snake" target="_blank" title="Snake">Snake</a> - Watch this snake follow your finger/mouse pointer, watch out! It's bright.
 
-  - ⚡🤔 <a href="https://github.com/Ruddernation-Designs/Canvas-Effects/tree/main/Snake_2" target="_blank" title="Snake_2">Snake 2</a> - Watch this snake follow your finger/mouse pointer, watch out! It's super bright and super colourful, Enjoy it!.
+  - 🔥🔥 <a href="https://github.com/Ruddernation-Designs/Canvas-Effects/tree/main/Snake_2" target="_blank" title="Snake_2">Snake 2</a> - Watch this snake follow your finger/mouse pointer, watch out! It's super bright and super colourful, Enjoy it!.
