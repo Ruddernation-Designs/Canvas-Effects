@@ -1,0 +1,10 @@
+   body {
+		padding:0;
+	background: #000000;
+    }
+	#mainCanvas {
+		height: auto;
+	width:100%;
+	z-index:9999;
+	}
+/*  Simple but effective  */
